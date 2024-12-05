@@ -88,24 +88,24 @@ Author_ID        | INT          | FOREIGN KEY (Authors.Author_ID), PRIMARY KEY
 ## Instalación
 
 1. Clonar el repositorio:
-   git clone https://github.com/tu-usuario/academic-publications-api.git
+   git clone https://github.com/xMane13/PaperDB_api.git
    cd academic-publications-api
 
-2. Crear y activar un entorno virtual:
+3. Crear y activar un entorno virtual:
    python -m venv .venv
    source .venv/bin/activate  # Linux/Mac
    .venv\Scripts\activate     # Windows
 
-3. Instalar las dependencias:
+4. Instalar las dependencias:
    pip install -r requirements.txt
 
-4. Configurar la base de datos:
+5. Configurar la base de datos:
    - Configura las credenciales de tu base de datos en el archivo .env o en las variables de entorno.
 
-5. Realizar migraciones de la base de datos (si usas Flask-Migrate):
+6. Realizar migraciones de la base de datos (si usas Flask-Migrate):
    flask db upgrade
 
-6. Ejecutar la aplicación:
+7. Ejecutar la aplicación:
    flask run
 
 ---
