@@ -89,7 +89,7 @@ Author_ID        | INT          | FOREIGN KEY (Authors.Author_ID), PRIMARY KEY
 
 1. Clonar el repositorio:
    git clone https://github.com/xMane13/PaperDB_api.git
-   cd academic-publications-api
+   cd PaperDB_api
 
 3. Crear y activar un entorno virtual:
    python -m venv .venv
@@ -158,19 +158,6 @@ FLASK_APP=run.py
 FLASK_ENV=development
 SQLALCHEMY_DATABASE_URI=mysql+pymysql://usuario:contraseña@localhost:3306/nombre_base_datos
 SECRET_KEY=clave_secreta
-
----
-
-## Contribuciones
-
-1. Haz un fork del repositorio.
-2. Crea una rama con tu nueva funcionalidad:
-   git checkout -b mi-nueva-funcionalidad
-3. Realiza tus cambios y haz un commit:
-   git commit -m "Añadida nueva funcionalidad"
-4. Sube los cambios a tu rama:
-   git push origin mi-nueva-funcionalidad
-5. Crea un Pull Request en el repositorio principal.
 
 ---
 
