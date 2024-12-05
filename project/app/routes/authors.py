@@ -88,3 +88,28 @@ def approved_papers():
         for author, paper in results
     ]
     return jsonify(data)
+
+
+# Actualizar un autor específico
+@author_bp.route('/<int:author_id>', methods=['PUT'])
+def update_author(author_id):
+    author = Authors.query.get(author_id)
+    if not author:
+        return jsonify({'error': 'Author not found'}), 404
+    data = request.json
+    author.author_name = data.get('author_name', author.author_name)
+    author.author_last_name = data.get('author_last_name', author.author_last_name)
+    author.author_email = data.get('author_email', author.author_email)
+    author.author_affiliation = data.get('author_affiliation', author.author_affiliation)
+    db.session.commit()
+    return jsonify({'message': 'Author updated successfully'})
+
+# Eliminar un autor específico
+@author_bp.route('/<int:author_id>', methods=['DELETE'])
+def delete_author(author_id):
+    author = Authors.query.get(author_id)
+    if not author:
+        return jsonify({'error': 'Author not found'}), 404
+    db.session.delete(author)
+    db.session.commit()
+    return jsonify({'message': 'Author deleted successfully'})
