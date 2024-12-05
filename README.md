@@ -176,5 +176,5 @@ SECRET_KEY=clave_secreta
 
 ## Contacto
 
-- Autor: [Tu Nombre](https://github.com/tu-usuario)
-- Correo: tu-email@example.com
+- Autor: [Manuel Munoz](https://github.com/xMane13)
+- Correo: manuel.munoz@yachaytech.edu.ec
